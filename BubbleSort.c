@@ -21,8 +21,7 @@ void main()
         for (j = 0; j < n - i - 1; j++) {
             t++;
             if (a[j] > a[j + 1]) {
-                t++;
-               
+                t++;
                 temp = a[j];
                 t++;
                 a[j] = a[j + 1];
