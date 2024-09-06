@@ -61,7 +61,7 @@ void Display();
   void Dequeue()
    {
      int value;
-     if(front==-1 || front==rear+1)
+     if(front==-1 || front > rear)
       {
         printf("QUEUE IS EMPTY\n");
       }
@@ -76,7 +76,7 @@ void Display();
   void Display()
    {
     int i;
-    if(front==-1 || front == rear+1)
+    if(front==-1 || front > rear)
      {
         printf("QUEUE IS EMPTY\n");
      }
