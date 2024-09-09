@@ -9,11 +9,11 @@ void Display();
       scanf("%d",&Max);
       while(opt!=4)
        {
-         printf("Choose and option :\n");
          printf("1 : PUSH\n");
          printf("2 : POP\n");
          printf("3 : DISPLAY\n");
          printf("4 : EXIT\n");
+         printf("Choose and option : ");
          scanf("%d",&opt);
 
          switch (opt)
@@ -71,9 +71,10 @@ void Display();
      }
     else
      {
+      printf("The stack elements are : ");
       for(i=Max-1;i>=0;i--)
        {
-        printf("%d\t" ,A[i]);
-       }
+        printf(" %d " ,A[i]);
+       }printf("\n");
      }
    }

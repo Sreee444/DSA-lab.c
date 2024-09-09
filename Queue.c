@@ -9,11 +9,11 @@ void Display();
         scanf("%d",&Max);
         while(choice !=4)
          {
-            printf("Choose an operation :\n");
             printf("1 : Enqueue\n");
             printf("2 : Dequeue\n");
             printf("3 : Display\n");
             printf("4 : Exit\n");
+            printf("Choose an operation : ");
             scanf("%d",&choice); 
 
             switch (choice)
@@ -82,6 +82,7 @@ void Display();
      }
     else
      {
+       printf("The Queue elements are : ");
         for(i=front;i<=rear;i++)
          {
             printf("%d ",A[i]);
