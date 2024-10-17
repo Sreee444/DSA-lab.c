@@ -116,7 +116,7 @@ int main() {
 
   
     printf("The Sum polynomial is: ");
-    struct node *ptr1 = poly3;
+    struct node *ptr9 = poly3;
     while(ptr9 != NULL) {
         printf("(%dX^%d) ", ptr9->coeff, ptr9->expo);
         if(ptr9->Link != NULL) {
