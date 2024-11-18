@@ -1,44 +1,39 @@
 #include <stdio.h>
-void main() 
-{
-    int n, i, j, temp, t = 0;
-    printf("Enter the number of elements:\n");
-    t++;
-    scanf("%d", &n);
-    t++;
-    int a[n];
-    t++;
+ void main()
+  {
+    int i,j,Size,temp;
+    printf("Enter the Size of the Array : ");
+    scanf("%d",&Size);
+    int A[Size];
+    printf("Enter the elements : \n");
+    for(i =0;i<Size;i++)
+     {
+        scanf("%d",&A[i]);
+     }
+    printf("The Enterd Array is : ");
+    for ( i = 0; i < Size; i++)
+    {
+        printf(" %d " ,A[i]);
+    }
 
-    printf("Enter %d elements:\n", n);
-    t++;
-    for (i = 0; i < n; i++) {
-        t++;
-        scanf("%d", &a[i]);
-        t++;
+    for( i = 0; i < Size-1; i++)
+    {
+       for ( j = 0; j < Size-i-1; j++)
+       {
+          if(A[j] >A[j+1])
+           {
+             temp = A[j];
+             A[j] = A[j+1];
+             A[j+1] = temp;
+           }
+       }
+       
     }
-    for (i = 0; i < n - 1; i++) {
-        t++;
-        for (j = 0; j < n - i - 1; j++) {
-            t++;
-            if (a[j] > a[j + 1]) {
-                t++;
-                temp = a[j];
-                t++;
-                a[j] = a[j + 1];
-                t++;
-                a[j + 1] = temp;
-                t++;
-            }
-        }
+    printf("\nThe Array after Bubble Sorting : ");
+    for ( i = 0; i < Size; i++)
+    {
+        printf(" %d " ,A[i]);
     }
-    printf("Sorted array: \n");
-    t++;
-    for (i = 0; i < n; i++) {
-        t++;
-        printf("%d ", a[i]);
-        t++;
-    }
-    printf("\nSpace Complexity = %d\n" ,(36+(n*4)));
-    t++;
-    printf("Time Complexity = %d\n", t);
-}
+    
+    
+  }
